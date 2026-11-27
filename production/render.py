@@ -27,6 +27,12 @@ def run(stage, number, take, shots):
     stem = f'{stage}_{number:02d}_t{take:02d}'
     suffix = '.png' if stage == 'image' else '.mp4'
     target = root / 'takes' / (stem+suffix)
+    preview = stage == 'video' and number in {2,3,4,5,6,7,10,11,13,14,15}
+    if preview:
+        if target.is_file():
+            return
+        target = root / 'stages' / (stem+'.mp4')
+        target.parent.mkdir(exist_ok=True)
     if target.exists() and target.stat().st_size:
         print('Already rendered', target, flush=True)
         return
@@ -40,7 +46,7 @@ def run(stage, number, take, shots):
     else:
         values = app.storyboard_request_defaults()
         values.update(mode='First / last frame', first_image=str(source), last_image=None,
-                      prompt=shot['video_prompt'], duration=shot['seconds']+1, seed=seed,
+                      prompt=shot['video_prompt'], duration=shot['seconds']+0.375, seed=seed,
                       model_profile='Original', generation_mode='Normal', steps=18,
                       scheduler='beta', attention_mode='PyTorch' if profile == 'a100' else 'Sage 2', cache_mode='Off',
                       width=2688, height=1536, auto_megapixels='4 MP',
@@ -60,6 +66,20 @@ def run(stage, number, take, shots):
                 'is fully referenced. At the final instant of the target video <Picture 2> is fully referenced as the ending pose. '
                 'Hold the pursed whistle at the beginning; the smile in Picture 2 arrives only after the offscreen cup answers.',
                 1)
+        if number == 14 and take >= 2:
+            values['prompt'] = (
+                'At the start of the shot <Picture 1> is fully referenced. At the end <Picture 2> is fully referenced. '
+                'A single uninterrupted, locked-off close-up of the seated older man. The amber light on his face and the soft blue light from the window '
+                'are constant from beginning to end. His eyes stay shut. For six seconds his lips gently purse as he whistles a quiet phrase. '
+                'He listens to one offscreen ceramic tap, breathes out through his nose, and the left corner of his closed mouth lifts, barely. '
+                'Hold his knowing smile. Fixed exposure, matte paper, still background, practical kitchen lamp. '
+                'Sound: quiet human whistle, rain outside, one delicate distant cup tap. No dialogue or music.')
+        if preview:
+            import importlib
+            from staged import prepare
+            module = importlib.import_module('h3_app.generation.h3')
+            original = module.construct_graph
+            module.construct_graph = lambda *a,**kw: prepare(original(*a,**kw),stem,target.parent)
         stream = generate(H3Request.from_values(values), services, runtime, run_context={})
     log = root / 'takes' / (stem+'.jsonl')
     with log.open('a') as out:
@@ -75,6 +95,11 @@ def run(stage, number, take, shots):
                     tmp=target.with_suffix('.partial'+suffix)
                     shutil.copyfile(output,tmp)
                     os.replace(tmp,target)
+    if preview:
+        module.construct_graph = original
+        if target.is_file():
+            with log.open('a') as out:
+                out.write(json.dumps({'time':time.time(),'seed':seed,'status':'Motion proof ready for review'})+'\n')
     if not target.is_file():
         raise RuntimeError(f'No take produced for {stem}')
 
