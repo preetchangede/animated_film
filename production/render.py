@@ -50,6 +50,16 @@ def run(stage, number, take, shots):
                       latent_upscale=True, latent_upscaler_model='Quality (FP32)',
                       latent_upscale_refine_steps=2, latent_upscale_method='Full-frame refinement',
                       postprocess='None')
+        if number == 14:
+            landing = root / 'takes' / 'image_14_t01.png'
+            if not landing.is_file():
+                raise FileNotFoundError('Shot 14 needs its selected smile landing frame')
+            values['last_image'] = str(landing)
+            values['prompt'] = values['prompt'].replace(
+                'is fully referenced.',
+                'is fully referenced. At the final instant of the target video <Picture 2> is fully referenced as the ending pose. '
+                'Hold the pursed whistle at the beginning; the smile in Picture 2 arrives only after the offscreen cup answers.',
+                1)
         stream = generate(H3Request.from_values(values), services, runtime, run_context={})
     log = root / 'takes' / (stem+'.jsonl')
     with log.open('a') as out:
