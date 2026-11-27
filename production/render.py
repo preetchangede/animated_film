@@ -9,6 +9,13 @@ from pathlib import Path
 
 root = Path('/content/drip')
 sys.path.insert(0, '/content/minimax-h3')
+from h3_gpu import detect_profile, verify_a100_driver
+profile = detect_profile(colab=True)
+os.environ['H3_GPU_PROFILE'] = profile
+if profile == 'a100':
+    verify_a100_driver()
+    os.environ['SERVER_ATTENTION_BACKEND'] = 'sla'
+    os.environ['SERVER_DENSE_ATTENTION_BACKEND'] = 'pytorch'
 os.environ.setdefault('SERVER_MEMORY_PROFILE', 'dynamic')
 from h3_ui import application as app
 from h3_app.generation.h3 import generate
@@ -35,9 +42,9 @@ def run(stage, number, take, shots):
         values.update(mode='First / last frame', first_image=str(source), last_image=None,
                       prompt=shot['video_prompt'], duration=shot['seconds']+1, seed=seed,
                       model_profile='Original', generation_mode='Normal', steps=18,
-                      scheduler='beta', attention_mode='Sage 2', cache_mode='Off',
+                      scheduler='beta', attention_mode='PyTorch' if profile == 'a100' else 'Sage 2', cache_mode='Off',
                       width=1920, height=1088, auto_megapixels='2 MP',
-                      stage_model_offload=False, result_format='Video', use_int8_vae=False,
+                      stage_model_offload=profile == 'a100', result_format='Video', use_int8_vae=False,
                       latent_upscale=True, latent_upscaler_model='Quality (FP32)',
                       latent_upscale_refine_steps=2, latent_upscale_method='Full-frame refinement',
                       postprocess='None')
