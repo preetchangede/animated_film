@@ -27,7 +27,7 @@ def run(stage, number, take, shots):
     stem = f'{stage}_{number:02d}_t{take:02d}'
     suffix = '.png' if stage == 'image' else '.mp4'
     target = root / 'takes' / (stem+suffix)
-    preview = stage == 'video' and number in {2,3,4,5,6,7,10,11,13,14,15}
+    preview = stage == 'video' and number in {1,2,3,4,5,6,7,10,11,13,14,15}
     if preview:
         if target.is_file():
             return
@@ -56,6 +56,17 @@ def run(stage, number, take, shots):
                       latent_upscale=True, latent_upscaler_model='Quality (FP32)',
                       latent_upscale_refine_steps=2, latent_upscale_method='Full-frame refinement',
                       postprocess='None')
+        values['prompt'] = values['prompt'].replace(
+            'warm amber lamp at right, diffuse blue sea-window light.',
+            'the same gentle lamplight and overcast blue window light stay steady for the entire shot. Fixed exposure and white balance.')
+        if number == 1 and take >= 2:
+            values['last_image'] = str(root / 'frames' / '01-end.png')
+            values['prompt'] = (
+                'The first frame <Picture 1> and last frame <Picture 2> show the same overcast coastal afternoon. '
+                'Locked, sheltered viewpoint behind cool wet cottage glass. A little drop slides slowly down the left third of the pane. '
+                'The indigo sea undulates in broad overlapping folded paper planes. The little white lighthouse stays in the far distance. '
+                'The lighthouse lamp is unlit. The cloud cover stays dense and blue-grey. Constant faint overcast daylight throughout. '
+                'Quiet, soft rain on glass and surf from beyond the window. No music, no voices.')
         if number == 14:
             landing = root / 'takes' / 'image_14_t01.png'
             if not landing.is_file():
