@@ -1,0 +1,177 @@
+[
+  {
+    "shot": 1,
+    "title": "First rain",
+    "seconds": 7,
+    "references": [
+      "set.png"
+    ],
+    "image_prompt": "Recreate Picture 1 as a single cinematic folded-cardstock miniature opening keyframe. Preserve lens, character identities, pose, left-right staging, chipped rim and prop state of Picture 1 exactly. Use remaining pictures as material/character/set references. Sharpen paper construction without changing design. Produce only the starting instant, before the action. Shot premise: A small soft bead slowly creeps down the window. Beyond it a thin white lip turns on an indigo folded-paper wave. Static camera. No camera shake.",
+    "video_prompt": "For the target video, at 0.00 seconds into the target video, <Picture 1> (from [Shot 1]) is fully referenced.\n\nintegrated_multimodal_description: [Shot 1] One continuous tactile folded-paper miniature shot, warm amber lamp at right, diffuse blue sea-window light. A small soft bead slowly creeps down the window. Beyond it a thin white lip turns on an indigo folded-paper wave. Static camera. No camera shake. Keep the sharply folded edges and discrete layered hair consistent in motion. No dialogue.\n\noverall_soundscape: Muffled surf outdoors, fine early rain against glass. Quiet room perspective.\n\nnon_diegetic_music: N/A"
+  },
+  {
+    "shot": 2,
+    "title": "The ritual",
+    "seconds": 8,
+    "references": [
+      "boy.png",
+      "granddad.png",
+      "set.png"
+    ],
+    "image_prompt": "Recreate Picture 1 as a single cinematic folded-cardstock miniature opening keyframe. Preserve lens, character identities, pose, left-right staging, chipped rim and prop state of Picture 1 exactly. Use remaining pictures as material/character/set references. Sharpen paper construction without changing design. Produce only the starting instant, before the action. Shot premise: The child takes one short step, then stops beside the open pot. Granddad marks a familiar four-note tune with a small relaxed hand movement. The child mirrors it just after. Hold both in the wide.",
+    "video_prompt": "For the target video, at 0.00 seconds into the target video, <Picture 1> (from [Shot 1]) is fully referenced.\n\nintegrated_multimodal_description: [Shot 1] One continuous tactile folded-paper miniature shot, warm amber lamp at right, diffuse blue sea-window light. The child takes one short step, then stops beside the open pot. Granddad marks a familiar four-note tune with a small relaxed hand movement. The child mirrors it just after. Hold both in the wide. Keep the sharply folded edges and discrete layered hair consistent in motion. No dialogue.\n\noverall_soundscape: An elderly man's soft wordless whistled phrase, a coat crease, tiny lid scrape and quiet rain.\n\nnon_diegetic_music: N/A"
+  },
+  {
+    "shot": 3,
+    "title": "The first voice",
+    "seconds": 7,
+    "references": [
+      "boy.png",
+      "granddad.png",
+      "set.png"
+    ],
+    "image_prompt": "Recreate Picture 1 as a single cinematic folded-cardstock miniature opening keyframe. Preserve lens, character identities, pose, left-right staging, chipped rim and prop state of Picture 1 exactly. Use remaining pictures as material/character/set references. Sharpen paper construction without changing design. Produce only the starting instant, before the action. Shot premise: The little yellow-cuffed hand gently slides the open green teapot into the leak. His hand clears the rim before a bead strikes the vessel. Let a second drip follow with slight irregularity.",
+    "video_prompt": "For the target video, at 0.00 seconds into the target video, <Picture 1> (from [Shot 1]) is fully referenced.\n\nintegrated_multimodal_description: [Shot 1] One continuous tactile folded-paper miniature shot, warm amber lamp at right, diffuse blue sea-window light. The little yellow-cuffed hand gently slides the open green teapot into the leak. His hand clears the rim before a bead strikes the vessel. Let a second drip follow with slight irregularity. Keep the sharply folded edges and discrete layered hair consistent in motion. No dialogue.\n\noverall_soundscape: Two hollow, resonant enamel toks. Subdued broad stereo rain behind.\n\nnon_diegetic_music: N/A"
+  },
+  {
+    "shot": 4,
+    "title": "The second voice",
+    "seconds": 8,
+    "references": [
+      "boy.png",
+      "granddad.png",
+      "set.png"
+    ],
+    "image_prompt": "Recreate Picture 1 as a single cinematic folded-cardstock miniature opening keyframe. Preserve lens, character identities, pose, left-right staging, chipped rim and prop state of Picture 1 exactly. Use remaining pictures as material/character/set references. Sharpen paper construction without changing design. Produce only the starting instant, before the action. Shot premise: The boy steadies the left handle. Granddad enters from right, rotates the charcoal pot a few degrees and releases it. A little ring opens in the water. Locked insert.",
+    "video_prompt": "For the target video, at 0.00 seconds into the target video, <Picture 1> (from [Shot 1]) is fully referenced.\n\nintegrated_multimodal_description: [Shot 1] One continuous tactile folded-paper miniature shot, warm amber lamp at right, diffuse blue sea-window light. The boy steadies the left handle. Granddad enters from right, rotates the charcoal pot a few degrees and releases it. A little ring opens in the water. Locked insert. Keep the sharply folded edges and discrete layered hair consistent in motion. No dialogue.\n\noverall_soundscape: A soft pot scrape on the sill, a lower hollow iron donk, room tone.\n\nnon_diegetic_music: N/A"
+  },
+  {
+    "shot": 5,
+    "title": "The empty place",
+    "seconds": 9,
+    "references": [
+      "boy.png",
+      "granddad.png",
+      "set.png"
+    ],
+    "image_prompt": "Recreate Picture 1 as a single cinematic folded-cardstock miniature opening keyframe. Preserve lens, character identities, pose, left-right staging, chipped rim and prop state of Picture 1 exactly. Use remaining pictures as material/character/set references. Sharpen paper construction without changing design. Produce only the starting instant, before the action. Shot premise: Granddad carefully lowers the single chipped blue cup the last inch onto the stool. The handle stays right. He removes his hand and leans back. The boy follows the empty rim with his eyes.",
+    "video_prompt": "For the target video, at 0.00 seconds into the target video, <Picture 1> (from [Shot 1]) is fully referenced.\n\nintegrated_multimodal_description: [Shot 1] One continuous tactile folded-paper miniature shot, warm amber lamp at right, diffuse blue sea-window light. Granddad carefully lowers the single chipped blue cup the last inch onto the stool. The handle stays right. He removes his hand and leans back. The boy follows the empty rim with his eyes. Keep the sharply folded edges and discrete layered hair consistent in motion. No dialogue.\n\noverall_soundscape: Tiny dry base-on-wood sound; chair creak, then the intake of a whistle. No water lands in the cup.\n\nnon_diegetic_music: N/A"
+  },
+  {
+    "shot": 6,
+    "title": "One beat early",
+    "seconds": 8,
+    "references": [
+      "boy.png",
+      "granddad.png",
+      "set.png"
+    ],
+    "image_prompt": "Recreate Picture 1 as a single cinematic folded-cardstock miniature opening keyframe. Preserve lens, character identities, pose, left-right staging, chipped rim and prop state of Picture 1 exactly. Use remaining pictures as material/character/set references. Sharpen paper construction without changing design. Produce only the starting instant, before the action. Shot premise: Hold the quiet wide. Only the boy's eyes move from the stairs to the window then to the dry cup. Both hands stay at his sides. Granddad whistles a beat early with eyes closed; one finger keeps time on his knee.",
+    "video_prompt": "For the target video, at 0.00 seconds into the target video, <Picture 1> (from [Shot 1]) is fully referenced.\n\nintegrated_multimodal_description: [Shot 1] One continuous tactile folded-paper miniature shot, warm amber lamp at right, diffuse blue sea-window light. Hold the quiet wide. Only the boy's eyes move from the stairs to the window then to the dry cup. Both hands stay at his sides. Granddad whistles a beat early with eyes closed; one finger keeps time on his knee. Keep the sharply folded edges and discrete layered hair consistent in motion. No dialogue.\n\noverall_soundscape: Left enamel tok, round low pot note, conspicuously empty beat, breathy old man's wordless whistle.\n\nnon_diegetic_music: N/A"
+  },
+  {
+    "shot": 7,
+    "title": "Again",
+    "seconds": 8,
+    "references": [
+      "boy.png",
+      "granddad.png",
+      "set.png"
+    ],
+    "image_prompt": "Recreate Picture 1 as a single cinematic folded-cardstock miniature opening keyframe. Preserve lens, character identities, pose, left-right staging, chipped rim and prop state of Picture 1 exactly. Use remaining pictures as material/character/set references. Sharpen paper construction without changing design. Produce only the starting instant, before the action. Shot premise: The crouching boy cocks his ear. His index finger hangs over his red boot; it almost taps the missing beat and stops. His pupils reach for the cup offscreen right. Hold the silence.",
+    "video_prompt": "For the target video, at 0.00 seconds into the target video, <Picture 1> (from [Shot 1]) is fully referenced.\n\nintegrated_multimodal_description: [Shot 1] One continuous tactile folded-paper miniature shot, warm amber lamp at right, diffuse blue sea-window light. The crouching boy cocks his ear. His index finger hangs over his red boot; it almost taps the missing beat and stops. His pupils reach for the cup offscreen right. Hold the silence. Keep the sharply folded edges and discrete layered hair consistent in motion. No dialogue.\n\noverall_soundscape: The same enamel and pot notes recur. Boy makes a tiny breath; his finger makes no sound.\n\nnon_diegetic_music: N/A"
+  },
+  {
+    "shot": 8,
+    "title": "The dry rim",
+    "seconds": 7,
+    "references": [
+      "boy.png",
+      "granddad.png",
+      "set.png"
+    ],
+    "image_prompt": "Recreate Picture 1 as a single cinematic folded-cardstock miniature opening keyframe. Preserve lens, character identities, pose, left-right staging, chipped rim and prop state of Picture 1 exactly. Use remaining pictures as material/character/set references. Sharpen paper construction without changing design. Produce only the starting instant, before the action. Shot premise: Dry cup macro. An amber line clings to the empty ivory interior. The blurred boy behind the rim tips his gaze upward toward the ceiling. The cup remains perfectly dry and still.",
+    "video_prompt": "For the target video, at 0.00 seconds into the target video, <Picture 1> (from [Shot 1]) is fully referenced.\n\nintegrated_multimodal_description: [Shot 1] One continuous tactile folded-paper miniature shot, warm amber lamp at right, diffuse blue sea-window light. Dry cup macro. An amber line clings to the empty ivory interior. The blurred boy behind the rim tips his gaze upward toward the ceiling. The cup remains perfectly dry and still. Keep the sharply folded edges and discrete layered hair consistent in motion. No dialogue.\n\noverall_soundscape: Distant hollow pot tone trailing away and an intake of breath, low constant room rain.\n\nnon_diegetic_music: N/A"
+  },
+  {
+    "shot": 9,
+    "title": "Summer's repair",
+    "seconds": 7,
+    "references": [
+      "set.png"
+    ],
+    "image_prompt": "Recreate Picture 1 as a single cinematic folded-cardstock miniature opening keyframe. Preserve lens, character identities, pose, left-right staging, chipped rim and prop state of Picture 1 exactly. Use remaining pictures as material/character/set references. Sharpen paper construction without changing design. Produce only the starting instant, before the action. Shot premise: Look up at the square pale repair above the chair. Soft sea-light makes a very slight pass across its irregular lower corner. The patch is completely dry. Camera is still.",
+    "video_prompt": "For the target video, at 0.00 seconds into the target video, <Picture 1> (from [Shot 1]) is fully referenced.\n\nintegrated_multimodal_description: [Shot 1] One continuous tactile folded-paper miniature shot, warm amber lamp at right, diffuse blue sea-window light. Look up at the square pale repair above the chair. Soft sea-light makes a very slight pass across its irregular lower corner. The patch is completely dry. Camera is still. Keep the sharply folded edges and discrete layered hair consistent in motion. No dialogue.\n\noverall_soundscape: Rain is noticeably farther away up here, muffled by the repaired roof. A boot scuffs below.\n\nnon_diegetic_music: N/A"
+  },
+  {
+    "shot": 10,
+    "title": "Water in the hood",
+    "seconds": 9,
+    "references": [
+      "boy.png",
+      "granddad.png",
+      "set.png"
+    ],
+    "image_prompt": "Recreate Picture 1 as a single cinematic folded-cardstock miniature opening keyframe. Preserve lens, character identities, pose, left-right staging, chipped rim and prop state of Picture 1 exactly. Use remaining pictures as material/character/set references. Sharpen paper construction without changing design. Produce only the starting instant, before the action. Shot premise: The boy touches a crease of his lowered hood below his ear. A tiny bead sits in it. His eyes move down and right; the idea arrives, then he holds absolutely still. Offscreen spoon.",
+    "video_prompt": "For the target video, at 0.00 seconds into the target video, <Picture 1> (from [Shot 1]) is fully referenced.\n\nintegrated_multimodal_description: [Shot 1] One continuous tactile folded-paper miniature shot, warm amber lamp at right, diffuse blue sea-window light. The boy touches a crease of his lowered hood below his ear. A tiny bead sits in it. His eyes move down and right; the idea arrives, then he holds absolutely still. Offscreen spoon. Keep the sharply folded edges and discrete layered hair consistent in motion. No dialogue.\n\noverall_soundscape: Quiet paper oilskin crease. Two distant vessel notes with a space after.\n\nnon_diegetic_music: N/A"
+  },
+  {
+    "shot": 11,
+    "title": "Borrowing a drop",
+    "seconds": 8,
+    "references": [
+      "boy.png",
+      "granddad.png",
+      "set.png"
+    ],
+    "image_prompt": "Recreate Picture 1 as a single cinematic folded-cardstock miniature opening keyframe. Preserve lens, character identities, pose, left-right staging, chipped rim and prop state of Picture 1 exactly. Use remaining pictures as material/character/set references. Sharpen paper construction without changing design. Produce only the starting instant, before the action. Shot premise: His left hand steadies his yellow hood's wet fold. Right hand scoops a little of the retained water using just one small silver teaspoon. Lift it slowly and level. No water falls from above.",
+    "video_prompt": "For the target video, at 0.00 seconds into the target video, <Picture 1> (from [Shot 1]) is fully referenced.\n\nintegrated_multimodal_description: [Shot 1] One continuous tactile folded-paper miniature shot, warm amber lamp at right, diffuse blue sea-window light. His left hand steadies his yellow hood's wet fold. Right hand scoops a little of the retained water using just one small silver teaspoon. Lift it slowly and level. No water falls from above. Keep the sharply folded edges and discrete layered hair consistent in motion. No dialogue.\n\noverall_soundscape: The little scrape of spoon on cloth, subtle coat rustle and muted room rain.\n\nnon_diegetic_music: N/A"
+  },
+  {
+    "shot": 12,
+    "title": "The third voice",
+    "seconds": 8,
+    "references": [
+      "boy.png",
+      "granddad.png",
+      "set.png"
+    ],
+    "image_prompt": "Recreate Picture 1 as a single cinematic folded-cardstock miniature opening keyframe. Preserve lens, character identities, pose, left-right staging, chipped rim and prop state of Picture 1 exactly. Use remaining pictures as material/character/set references. Sharpen paper construction without changing design. Produce only the starting instant, before the action. Shot premise: Macro with camera locked. Hold on a single bead on the spoon; it elongates, detaches ONCE, falls into the dry blue cup. A single small ring expands; hold the quiet after impact. One continuous event.",
+    "video_prompt": "For the target video, at 0.00 seconds into the target video, <Picture 1> (from [Shot 1]) is fully referenced.\n\nintegrated_multimodal_description: [Shot 1] One continuous tactile folded-paper miniature shot, warm amber lamp at right, diffuse blue sea-window light. Macro with camera locked. Hold on a single bead on the spoon; it elongates, detaches ONCE, falls into the dry blue cup. A single small ring expands; hold the quiet after impact. One continuous event. Keep the sharply folded edges and discrete layered hair consistent in motion. No dialogue.\n\noverall_soundscape: A single delicate high ceramic tink exactly on contact. Let its decay hang in the room, no other sharp sounds.\n\nnon_diegetic_music: N/A"
+  },
+  {
+    "shot": 13,
+    "title": "The answer",
+    "seconds": 8,
+    "references": [
+      "boy.png",
+      "granddad.png",
+      "set.png"
+    ],
+    "image_prompt": "Recreate Picture 1 as a single cinematic folded-cardstock miniature opening keyframe. Preserve lens, character identities, pose, left-right staging, chipped rim and prop state of Picture 1 exactly. Use remaining pictures as material/character/set references. Sharpen paper construction without changing design. Produce only the starting instant, before the action. Shot premise: Granddad finishes his wordless phrase on time, eyes closed. The boy lowers his empty spoon slowly and studies him, hopeful. Neither smiles yet. Gentle breathing.",
+    "video_prompt": "For the target video, at 0.00 seconds into the target video, <Picture 1> (from [Shot 1]) is fully referenced.\n\nintegrated_multimodal_description: [Shot 1] One continuous tactile folded-paper miniature shot, warm amber lamp at right, diffuse blue sea-window light. Granddad finishes his wordless phrase on time, eyes closed. The boy lowers his empty spoon slowly and studies him, hopeful. Neither smiles yet. Gentle breathing. Keep the sharply folded edges and discrete layered hair consistent in motion. No dialogue.\n\noverall_soundscape: Quiet warm human whistle lifts then resolves after the cup note. Low textured rain only.\n\nnon_diegetic_music: N/A"
+  },
+  {
+    "shot": 14,
+    "title": "In on it",
+    "seconds": 9,
+    "references": [
+      "granddad.png",
+      "set.png"
+    ],
+    "image_prompt": "Recreate Picture 1 as a single cinematic folded-cardstock miniature opening keyframe. Preserve lens, character identities, pose, left-right staging, chipped rim and prop state of Picture 1 exactly. Use remaining pictures as material/character/set references. Sharpen paper construction without changing design. Produce only the starting instant, before the action. Shot premise: Only close-up. He deliberately begins the next whistle too early; after a long beat of stillness and a soft answer from the cup, just one corner of his closed mouth rises. Keep eyelids closed and paper brow steady.",
+    "video_prompt": "For the target video, at 0.00 seconds into the target video, <Picture 1> (from [Shot 1]) is fully referenced.\n\nintegrated_multimodal_description: [Shot 1] One continuous tactile folded-paper miniature shot, warm amber lamp at right, diffuse blue sea-window light. Only close-up. He deliberately begins the next whistle too early; after a long beat of stillness and a soft answer from the cup, just one corner of his closed mouth rises. Keep eyelids closed and paper brow steady. Keep the sharply folded edges and discrete layered hair consistent in motion. No dialogue.\n\noverall_soundscape: Early whistled pickup, small exhale, then a softer second ceramic tink from offscreen. No added musical accent.\n\nnon_diegetic_music: N/A"
+  },
+  {
+    "shot": 15,
+    "title": "Their song",
+    "seconds": 9,
+    "references": [
+      "boy.png",
+      "granddad.png",
+      "set.png"
+    ],
+    "image_prompt": "Recreate Picture 1 as a single cinematic folded-cardstock miniature opening keyframe. Preserve lens, character identities, pose, left-right staging, chipped rim and prop state of Picture 1 exactly. Use remaining pictures as material/character/set references. Sharpen paper construction without changing design. Produce only the starting instant, before the action. Shot premise: The boy slides his stool a little toward Granddad and looks for permission. Granddad answers with a gentle toe tap. The boy relaxes and echoes the tap. Both come to rest; hold the room for the last two seconds. Keep the single chipped cup and spoon.",
+    "video_prompt": "For the target video, at 0.00 seconds into the target video, <Picture 1> (from [Shot 1]) is fully referenced.\n\nintegrated_multimodal_description: [Shot 1] One continuous tactile folded-paper miniature shot, warm amber lamp at right, diffuse blue sea-window light. The boy slides his stool a little toward Granddad and looks for permission. Granddad answers with a gentle toe tap. The boy relaxes and echoes the tap. Both come to rest; hold the room for the last two seconds. Keep the single chipped cup and spoon. Keep the sharply folded edges and discrete layered hair consistent in motion. No dialogue.\n\noverall_soundscape: Their little wordless whistle and vessel rhythm answers once; taper to soft interior rain.\n\nnon_diegetic_music: N/A"
+  }
+]
