@@ -75,6 +75,13 @@ def finish(stem):
     if not files:
         raise FileNotFoundError(stem+' motion checkpoint')
     graph['9011']['inputs']['path'] = str(files[-1].relative_to(OUTPUT))
+    # Use the delivery-size finish tested on shot 6. Keep the untouched high-resolution graph on disk.
+    size = os.environ.get('DRIP_DETAIL_SIZE','2016')
+    if size not in ('2016','2688'):
+        raise ValueError('Supported detail widths are 2016 and 2688')
+    if size == '2016':
+        for kind in ('MiniMaxH3ImageToVideo','MiniMaxH3LatentUpscaleWithModel'):
+            graph[node(graph,kind)]['inputs'].update(width=2016,height=1152)
     jobfile = folder/(stem+'.job')
     if jobfile.exists():
         job = jobfile.read_text().strip()
