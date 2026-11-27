@@ -1,0 +1,71 @@
+"""Render image comparisons or video takes. Invoke on a prepared film G4."""
+import argparse
+import json
+import os
+import shutil
+import sys
+import time
+from pathlib import Path
+
+root = Path('/content/drip')
+sys.path.insert(0, '/content/minimax-h3')
+os.environ.setdefault('SERVER_MEMORY_PROFILE', 'dynamic')
+from h3_ui import application as app
+from h3_app.generation.h3 import generate
+from h3_app.generation.h3_image import H3ImageRequest, generate_h3_image
+from h3_app.generation.requests import H3Request
+
+def run(stage, number, take, shots):
+    shot = shots[number - 1]
+    stem = f'{stage}_{number:02d}_t{take:02d}'
+    suffix = '.png' if stage == 'image' else '.mp4'
+    target = root / 'takes' / (stem+suffix)
+    if target.exists() and target.stat().st_size:
+        print('Already rendered', target, flush=True)
+        return
+    seed = 74300 + number * 100 + take
+    services, runtime = app._generation_services(), app._runtime_config()
+    source = root / 'frames' / f'{number:02d}.png'
+    if stage == 'image':
+        refs = [str(source)] + [str(root / 'refs' / n) for n in shot['references']]
+        req = H3ImageRequest(shot['image_prompt'],2048,1152,seed,tuple(refs),False)
+        stream = generate_h3_image(req, services, runtime)
+    else:
+        values = app.storyboard_request_defaults()
+        values.update(mode='First / last frame', first_image=str(source), last_image=None,
+                      prompt=shot['video_prompt'], duration=shot['seconds']+1, seed=seed,
+                      model_profile='Original', generation_mode='Normal', steps=18,
+                      scheduler='beta', attention_mode='Sage 2', cache_mode='Off',
+                      width=1920, height=1088, auto_megapixels='2 MP',
+                      stage_model_offload=False, result_format='Video', use_int8_vae=False,
+                      latent_upscale=True, latent_upscaler_model='Quality (FP32)',
+                      latent_upscale_refine_steps=2, latent_upscale_method='Full-frame refinement',
+                      postprocess='None')
+        stream = generate(H3Request.from_values(values), services, runtime, run_context={})
+    log = root / 'takes' / (stem+'.jsonl')
+    with log.open('a') as out:
+        for result, status in stream:
+            print(status, flush=True)
+            out.write(json.dumps({'time': time.time(), 'seed':seed,'status':status})+'\n')
+            out.flush()
+            if status.lower().startswith('error:'):
+                raise RuntimeError(status)
+            if result:
+                output = Path(result[0] if isinstance(result,list) else result)
+                if output.is_file() and output.suffix.lower()==suffix:
+                    tmp=target.with_suffix('.partial'+suffix)
+                    shutil.copyfile(output,tmp)
+                    os.replace(tmp,target)
+    if not target.is_file():
+        raise RuntimeError(f'No take produced for {stem}')
+
+if __name__=='__main__':
+    parser=argparse.ArgumentParser()
+    parser.add_argument('stage',choices=['image','video'])
+    parser.add_argument('shots',nargs='+',type=int,choices=range(1,16))
+    parser.add_argument('--take',type=int,default=1)
+    args=parser.parse_args()
+    (root/'takes').mkdir(exist_ok=True,parents=True)
+    shots=json.loads((root/'shots.json').read_text())
+    for number in args.shots:
+        run(args.stage,number,args.take,shots)
