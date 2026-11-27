@@ -1,0 +1,188 @@
+{
+  "film": "The Missing Drip",
+  "review": "01",
+  "stage": "Submitted for user keyframe review",
+  "delivery_fps": 24,
+  "total_seconds": 120,
+  "frames": [
+    {
+      "shot": 1,
+      "title": "First rain",
+      "file": "KF01 - First rain.png",
+      "in_frame": 0,
+      "edit_frames": 168,
+      "reference_ids": [
+        "P03"
+      ]
+    },
+    {
+      "shot": 2,
+      "title": "The ritual",
+      "file": "KF02 - The ritual.png",
+      "in_frame": 168,
+      "edit_frames": 192,
+      "reference_ids": [
+        "P03",
+        "P01",
+        "P02",
+        "P00"
+      ],
+      "continuity": "Granddad marks the whistle with an empty hand. The teapot has one hinged lid; the blue cup starts on the shelf behind the chair."
+    },
+    {
+      "shot": 3,
+      "title": "The first voice",
+      "file": "KF03 - The first voice.png",
+      "in_frame": 360,
+      "edit_frames": 168,
+      "reference_ids": [
+        "P03",
+        "P01"
+      ]
+    },
+    {
+      "shot": 4,
+      "title": "The second voice",
+      "file": "KF04 - The second voice.png",
+      "in_frame": 528,
+      "edit_frames": 192,
+      "reference_ids": [
+        "P03",
+        "P01",
+        "P02"
+      ]
+    },
+    {
+      "shot": 5,
+      "title": "The empty place",
+      "file": "KF05 - The empty place.png",
+      "in_frame": 720,
+      "edit_frames": 216,
+      "reference_ids": [
+        "P03",
+        "P01",
+        "P02"
+      ]
+    },
+    {
+      "shot": 6,
+      "title": "One beat early",
+      "file": "KF06 - One beat early.png",
+      "in_frame": 936,
+      "edit_frames": 192,
+      "reference_ids": [
+        "P03",
+        "P01",
+        "P02"
+      ]
+    },
+    {
+      "shot": 7,
+      "title": "Again",
+      "file": "KF07 - Again.png",
+      "in_frame": 1128,
+      "edit_frames": 192,
+      "reference_ids": [
+        "P01",
+        "P02",
+        "P03"
+      ],
+      "continuity": "Single on the boy at the stairs, Grandpa offscreen. Listening finger and boot supply the rhythmic cue."
+    },
+    {
+      "shot": 8,
+      "title": "The dry rim",
+      "file": "KF08 - The dry rim.png",
+      "in_frame": 1320,
+      "edit_frames": 168,
+      "reference_ids": [
+        "P03",
+        "P01"
+      ]
+    },
+    {
+      "shot": 9,
+      "title": "Summer's repair",
+      "file": "KF09 - Summer's repair.png",
+      "in_frame": 1488,
+      "edit_frames": 168,
+      "reference_ids": [
+        "P03"
+      ]
+    },
+    {
+      "shot": 10,
+      "title": "Water in the hood",
+      "file": "KF10 - Water in the hood.png",
+      "in_frame": 1656,
+      "edit_frames": 216,
+      "reference_ids": [
+        "P01",
+        "P03",
+        "P02"
+      ],
+      "continuity": "Closer single on the boy and rain bead; his downward eyeline carries us to the teaspoon offscreen."
+    },
+    {
+      "shot": 11,
+      "title": "Borrowing a drop",
+      "file": "KF11 - Borrowing a drop.png",
+      "in_frame": 1872,
+      "edit_frames": 192,
+      "reference_ids": [
+        "P01",
+        "P03"
+      ],
+      "continuity": "Collect from water retained in the hood; the indoor air above the spoon stays dry."
+    },
+    {
+      "shot": 12,
+      "title": "The third voice",
+      "file": "KF12 - The third voice.png",
+      "in_frame": 2064,
+      "edit_frames": 192,
+      "reference_ids": [
+        "P03",
+        "P01"
+      ]
+    },
+    {
+      "shot": 13,
+      "title": "The answer",
+      "file": "KF13 - The answer.png",
+      "in_frame": 2256,
+      "edit_frames": 192,
+      "reference_ids": [
+        "P01",
+        "P02",
+        "P03"
+      ]
+    },
+    {
+      "shot": 14,
+      "title": "In on it",
+      "file": "KF14 - In on it.png",
+      "in_frame": 2448,
+      "edit_frames": 216,
+      "reference_ids": [
+        "P02",
+        "P01",
+        "P03"
+      ]
+    },
+    {
+      "shot": 15,
+      "title": "Their song",
+      "file": "KF15 - Their song.png",
+      "in_frame": 2664,
+      "edit_frames": 216,
+      "reference_ids": [
+        "P03",
+        "P01",
+        "P02",
+        "P00"
+      ],
+      "continuity": "The dark pot remains a lidless raincatcher. End on the shared foot-tap."
+    }
+  ]
+}
