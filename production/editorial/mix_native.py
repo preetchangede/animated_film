@@ -29,7 +29,15 @@ def run():
     cuts=json.loads((root/'decisions-live.json').read_text())
     shots=json.loads((root/'shots.json').read_text())
     assert all(cuts.get(str(s['shot']),{}).get('status')=='Accepted' for s in shots)
-    total=sum(s['seconds'] for s in shots);bed=np.zeros((total*sr,2),np.float32)
+    original_starts=np.cumsum([0]+[s['seconds'] for s in shots])
+    lengths=json.loads((here/'cut-lengths.json').read_text()) if (here/'cut-lengths.json').exists() else {}
+    for shot in shots:
+        shot['seconds']=lengths.get(str(shot['shot']),shot['seconds'])
+    starts=np.cumsum([0]+[s['seconds'] for s in shots])
+    def when(t):
+        i=min(len(shots)-1,np.searchsorted(original_starts,t,side='right')-1)
+        return starts[i]+min(t-original_starts[i],shots[i]['seconds'])
+    total=round(sum(s['seconds'] for s in shots));bed=np.zeros((total*sr,2),np.float32)
     ocean=wav(rr/'video_01_t01.mp4',.16,7.60)
     # Overlap different parts of a real surf take, rotating starting phase and stereo perspective.
     rng=np.random.default_rng(4);t=0;n=0
@@ -41,7 +49,7 @@ def run():
         t+=length-.55;n+=1
     wet=filter_audio(bed,5100,'lowpass');inner=filter_audio(bed,1850,'lowpass')
     position=np.arange(len(bed))/sr
-    perspective=np.interp(position,[0,6.6,7.4,61,63,68.2,70,85,88,94,96,119.9],
+    perspective=np.interp(position,[when(t) for t in [0,6.6,7.4,61,63,68.2,70,85,88,94,96,119.9]],
                            [1,1,.17,.17,.31,.31,.15,.12,.065,.065,.18,.2])[:,None]
     mix=(peak(inner,.055)*(1-perspective)+peak(wet,.13)*perspective).astype(np.float32)
     offsets={};pos=0
@@ -64,11 +72,11 @@ def run():
     second=peak(edges(wav(Path(cuts['4']['file']),max(0,iron_time-.07),.57),.012,.15),.24)
     cup=peak(wav(here/'cup-strike.wav'),.20)
     phrase=peak(wav(here/'granddad-phrase.wav'),.19);answer=peak(wav(here/'granddad-answer.wav'),.20)
-    for when,intensity in [(35.1,.52),(40.1,.74),(44.3,.43),(48.6,.62),(53.6,.45),(72,.40)]:
-        add(mix,when,first,intensity,-.25);add(mix,when+.74,second,intensity*.95,-.05)
+    for timing,intensity in [(40.1,.74),(44.3,.43),(48.6,.62),(53.6,.45),(72,.40)]:
+        add(mix,when(timing),first,intensity,-.25);add(mix,when(timing+.74),second,intensity*.95,-.05)
     add(mix,9.95,phrase,.73,.17)
-    add(mix,41.12,edges(phrase[:round(sr*1.85)],.02,.11),.71,.2)
-    add(mix,94.23,answer,.86,.14)
+    add(mix,when(41.12),edges(phrase[:round(sr*1.85)],.02,.11),.71,.2)
+    add(mix,when(94.23),answer,.86,.14)
     ending=float(cuts['15'].get('final_beat',3.55))+offsets[15]
     add(mix,ending,first,.62,-.25);add(mix,ending+.72,second,.62,-.05);add(mix,ending+1.46,cup,.76,.22)
     add(mix,ending+1.75,edges(answer[:round(2.2*sr)],.07,.28),.67,.13)
