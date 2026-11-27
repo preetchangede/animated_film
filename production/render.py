@@ -27,7 +27,7 @@ def run(stage, number, take, shots):
     stem = f'{stage}_{number:02d}_t{take:02d}'
     suffix = '.png' if stage == 'image' else '.mp4'
     target = root / 'takes' / (stem+suffix)
-    preview = stage == 'video' and number in {1,2,3,4,5,6,7,10,11,13,14,15}
+    preview = stage == 'video' and number in range(1,16)
     if preview:
         if target.is_file():
             return
@@ -46,7 +46,7 @@ def run(stage, number, take, shots):
     else:
         values = app.storyboard_request_defaults()
         values.update(mode='First / last frame', first_image=str(source), last_image=None,
-                      prompt=shot['video_prompt'], duration=shot['seconds']+0.375, seed=seed,
+                      prompt=shot['video_prompt'], duration=shot['seconds']+(0.20 if shot['seconds']==7 else 0.375), seed=seed,
                       model_profile='Original', generation_mode='Normal', steps=18,
                       scheduler='beta', attention_mode='PyTorch' if profile == 'a100' else 'Sage 2', cache_mode='Off',
                       width=2688, height=1536, auto_megapixels='4 MP',
