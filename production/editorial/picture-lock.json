@@ -1,0 +1,147 @@
+{
+  "title": "The Missing Drip",
+  "duration_seconds": 113.0,
+  "frame_rate": 24,
+  "size": [
+    1920,
+    1080
+  ],
+  "audio": "Stereo 48 kHz",
+  "shots": [
+    {
+      "shot": 1,
+      "title": "First rain",
+      "start_seconds": 0,
+      "seconds": 7,
+      "source": "video_01_t02.mp4",
+      "source_in": 0.0,
+      "review": "The foreground drop travels down the glass, with folded whitecaps behind it. The cool exterior holds into the cottage cut."
+    },
+    {
+      "shot": 2,
+      "title": "The ritual",
+      "start_seconds": 7,
+      "seconds": 8,
+      "source": "video_02_t01.mp4",
+      "source_in": 0.13,
+      "review": "The boy enters cleanly and echoes Granddad\u2019s raised hand beside the open pot. Use their shared gesture to lead into the teapot insert."
+    },
+    {
+      "shot": 3,
+      "title": "The first voice",
+      "start_seconds": 15,
+      "seconds": 7,
+      "source": "video_03_t01.mp4",
+      "source_in": 0.0,
+      "review": "The first drip lands with the kettle already open. The second burst gives the enamel rhythm a clear return."
+    },
+    {
+      "shot": 4,
+      "title": "The second voice",
+      "start_seconds": 22,
+      "seconds": 8,
+      "source": "04-pot-v01.mp4",
+      "source_in": 0.16,
+      "review": "Framed on the hands and the iron pot. The quieter second voice follows the enamel kettle; the contact and expanding rings stay in sync."
+    },
+    {
+      "shot": 5,
+      "title": "The empty place",
+      "start_seconds": 30,
+      "seconds": 4.0,
+      "source": "05-cup-v01.mp4",
+      "source_in": 0.0,
+      "review": "Granddad sets the cup down and both listen. The four-second cut preserves the glance and leaves space for the missing note."
+    },
+    {
+      "shot": 6,
+      "title": "One beat early",
+      "start_seconds": 34.0,
+      "seconds": 8,
+      "source": "video_06_t01.mp4",
+      "source_in": 0.0,
+      "review": "The boy follows the missing beat with his eyes while Granddad keeps time. Faces, paper folds and cup placement hold through the cut."
+    },
+    {
+      "shot": 7,
+      "title": "Again",
+      "start_seconds": 42.0,
+      "seconds": 8,
+      "source": "07-listening.mp4",
+      "source_in": 0.0,
+      "review": "The held finger and listening glance stay beside the staircase. Stabilized the camera against the original cottage so the silent beat holds."
+    },
+    {
+      "shot": 8,
+      "title": "The dry rim",
+      "start_seconds": 50.0,
+      "seconds": 7,
+      "source": "08-dry-cup.mp4",
+      "source_in": 0.0,
+      "review": "H3 added liquid to the cup. The final composite keeps the approved dry foreground and the boy\u2019s animated glance up toward the ceiling."
+    },
+    {
+      "shot": 9,
+      "title": "Summer's repair",
+      "start_seconds": 57.0,
+      "seconds": 7,
+      "source": "video_09_t01.mp4",
+      "source_in": 0.0,
+      "review": "The patch explains the missing drip without a line of dialogue. Cool window light passes across the four fixings while the roof remains dry."
+    },
+    {
+      "shot": 10,
+      "title": "Water in the hood",
+      "start_seconds": 64.0,
+      "seconds": 9,
+      "source": "video_10_t02.mp4",
+      "source_in": 0.0,
+      "review": "Second take. The daylight wall, coat edge and paper curls stay steady as the boy notices the water in his hood."
+    },
+    {
+      "shot": 11,
+      "title": "Borrowing a drop",
+      "start_seconds": 73.0,
+      "seconds": 6,
+      "source": "11-borrowed-drop.mp4",
+      "source_in": 0.0,
+      "review": "Enter on the spoon in the hood pool and hold the six-second lift. The stray incoming stream is trimmed away."
+    },
+    {
+      "shot": 12,
+      "title": "The third voice",
+      "start_seconds": 79.0,
+      "seconds": 8,
+      "source": "12-macro-v02.mp4",
+      "source_in": 0,
+      "review": "Locked spoon and chipped cup. One drop lands at 4.90s, with the native strike at 4.91s."
+    },
+    {
+      "shot": 13,
+      "title": "The answer",
+      "start_seconds": 87.0,
+      "seconds": 8,
+      "source": "video_13_t01.mp4",
+      "source_in": 0.0,
+      "review": "The spoon settles while Granddad finishes his phrase. Cast, cup, rain window and light hold through the full eight seconds."
+    },
+    {
+      "shot": 14,
+      "title": "In on it",
+      "start_seconds": 95.0,
+      "seconds": 9,
+      "source": "14-smile-v01.mp4",
+      "source_in": 0,
+      "review": "Retake cut away to the window. Selected the clean, full-resolution performance after the flash in take 1. Cup answers at 6.63s, then Granddad smiles."
+    },
+    {
+      "shot": 15,
+      "title": "Their song",
+      "start_seconds": 104.0,
+      "seconds": 9,
+      "source": "video_15_t01.mp4",
+      "source_in": 0.0,
+      "review": "Wide shot holds both silhouettes. Time the closing three notes to the boot exchange then leave the cottage at rest."
+    }
+  ]
+}
