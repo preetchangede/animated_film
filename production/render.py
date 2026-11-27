@@ -67,6 +67,15 @@ def run(stage, number, take, shots):
                 'The indigo sea undulates in broad overlapping folded paper planes. The little white lighthouse stays in the far distance. '
                 'The lighthouse lamp is unlit. The cloud cover stays dense and blue-grey. Constant faint overcast daylight throughout. '
                 'Quiet, soft rain on glass and surf from beyond the window. No music, no voices.')
+        if number == 10 and take >= 2:
+            values['last_image'] = str(source)
+            values['prompt'] = (
+                'Single continuous close-up. <Picture 1> exactly establishes the boy and the plain peach cottage wall. '
+                'The final frame <Picture 2> establishes the identical composition in identical soft afternoon daylight. '
+                'A little water bead is already held in the fold of his rain hood against his ear. '
+                'His fingertips feel the fold. His eyes glance down toward his collar. One quiet blink, a moment of recognition. '
+                'The wall behind him is bare from edge to edge. Fixed camera and unchanging exposure, warm muted paper colours. '
+                'Natural coat rustle and soft rain only.')
         if number == 14:
             landing = root / 'takes' / 'image_14_t01.png'
             if not landing.is_file():
